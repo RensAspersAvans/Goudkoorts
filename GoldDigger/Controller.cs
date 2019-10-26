@@ -35,7 +35,7 @@ namespace GoldDigger
             }
         }
 
-<<<<<<< HEAD
+
         public void Run()
         {
             timer.Enabled = true;           
@@ -46,12 +46,12 @@ namespace GoldDigger
             timer.Enabled = false;
             GameOverView endScreen = new GameOverView();
             endScreen.Show(-1);
-            //endScreen.Show(game.GetScore());
+            endScreen.Show(game.GetScore());
         }
 
         public void Tick()
         {
-            //game.update();
+            game.Update();
             
             if(game.GameOver())
             {
@@ -62,12 +62,6 @@ namespace GoldDigger
         }
 
         
-=======
-        public void startGame()
-        {
 
-            GameModel game = new GameModel();
-        }
->>>>>>> bdda1ebba343ee0067b96ee7c6282acd7b195b26
     }
 }
