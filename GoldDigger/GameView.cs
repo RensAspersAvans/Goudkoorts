@@ -6,5 +6,18 @@ namespace GoldDigger
 {
     public class GameView
     {
+        
+
+        
+
+        public void Update()
+        {
+            //laat alle layers zien
+            //laat daaronder de controls zien
+            
+        }
     }
+
+
+   
 }

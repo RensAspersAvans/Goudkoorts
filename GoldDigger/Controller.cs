@@ -15,7 +15,7 @@ namespace GoldDigger
             
             timer = new System.Timers.Timer(1000); //1000 ms = 1 tick per seconde
 
-            timer.Elapsed += new ElapsedEventHandler((source, e) => Tick());
+            timer.Elapsed += new ElapsedEventHandler((source, e) => Tick()); //Roept Tick aan elke seconde
             timer.AutoReset = true;
             
         }
@@ -54,9 +54,12 @@ namespace GoldDigger
             if(game.GameOver())
             {
                 Stop();
-            }
+            }            
+        }
 
-            
+        public void ParseRailroad()
+        {
+            //deze methode zet alle informatie uit de RailRoad om naar strings en stuurt deze door naar de view om te laten zien.
         }
 
         
