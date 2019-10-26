@@ -8,6 +8,7 @@ namespace GoldDigger
     {
         private int _score;
         private bool _gameOver;
+        private RailRoadModel rm;
 
 
         public GameModel()
@@ -35,7 +36,11 @@ namespace GoldDigger
 
         public void Update()
         {
-
+            if (!rm.MoveCarts())
+            {
+                _gameOver = true;
+                return;
+            }
         }
     }
 }
