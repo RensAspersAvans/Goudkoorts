@@ -13,5 +13,11 @@ namespace GoldDigger
             {
             }
         }
+
+        public void startGame()
+        {
+
+            GameModel game = new GameModel();
+        }
     }
 }

@@ -9,19 +9,57 @@ namespace GoldDigger
         public Track Next { get; set; }
         public Track Previous { get; set; }
         public Cart Cart { get; set; }
-        public Char Symbol { get; set; }
+        public Char Symbol{ get; set; }
 
 
-        public Boolean ReceiveCart(Cart cart)
+        
+
+        public virtual Char getSymbol()
+        {
+            if (Cart == null)
+            {
+                if (Symbol.Equals(null))
+                {
+                    Symbol = '█';
+                }
+                return Symbol;
+            }
+            else
+            {
+                return 'Ü';
+            }
+        }
+
+
+        public virtual int ReceiveCart(Cart cart)
         {
             if(Cart == null)
             {
                 Cart = cart;
-                return true;
+                return 1;
             }
 
-            return false;
+            return 2; 
+        }
 
+        public virtual Boolean MoveCartForward()
+        {
+            if (Next == null)
+            {
+                return false;
+            }
+            int i = Next.ReceiveCart(Cart);
+            if (i == 1)
+            {
+                Cart.cur_track = Next;
+                this.Cart = null;
+                return true;
+            }
+            if (i == 3)
+            {
+                return true;
+            }
+            return false;
             
         }
         

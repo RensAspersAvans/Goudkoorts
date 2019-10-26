@@ -7,5 +7,18 @@ namespace GoldDigger
     public class Cart
     {
         public Track cur_track { get; set; } 
+        public Boolean Full { get; set; }
+
+        public Boolean update()
+        {
+            if (cur_track == null)
+            {
+                return true;
+            }
+            else
+            {
+                return cur_track.MoveCartForward();
+            }
+        }
     }
 }
