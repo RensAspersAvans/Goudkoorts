@@ -35,7 +35,6 @@ namespace GoldDigger
             }
         }
 
-
         public void Run()
         {
             timer.Enabled = true;           
