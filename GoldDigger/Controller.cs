@@ -45,12 +45,12 @@ namespace GoldDigger
             timer.Enabled = false;
             GameOverView endScreen = new GameOverView();
             endScreen.Show(-1);
-            //endScreen.Show(game.GetScore());
+            endScreen.Show(game.GetScore());
         }
 
         public void Tick()
         {
-            //game.update();
+            game.Update();
             
             if(game.GameOver())
             {
@@ -59,6 +59,8 @@ namespace GoldDigger
 
             
         }
+
+        
 
     }
 }
