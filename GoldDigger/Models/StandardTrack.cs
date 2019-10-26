@@ -6,5 +6,6 @@ namespace GoldDigger
 {
     public class StandardTrack : Track
     {
+
     }
 }

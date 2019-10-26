@@ -3,8 +3,8 @@
   <Class Name="GoldDigger.Cart">
     <Position X="1.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Cart.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.GameView">
@@ -17,66 +17,58 @@
   <Class Name="GoldDigger.Track">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Track.cs</FileName>
+      <HashCode>IgAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Track.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.StandardTrack">
     <Position X="1.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StandardTrack.cs</FileName>
+      <FileName>Models\StandardTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.SwitchForward">
     <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SwitchForward.cs</FileName>
+      <FileName>Models\SwitchForward.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.SwitchBackward">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SwitchBackward.cs</FileName>
+      <FileName>Models\SwitchBackward.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.YardTrack">
     <Position X="4" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>YardTrack.cs</FileName>
+      <FileName>Models\YardTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.HarborTrack">
     <Position X="1.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>HarborTrack.cs</FileName>
+      <FileName>Models\HarborTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.RailRoadModel">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAI=</HashCode>
-      <FileName>RailRoadModel.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAAAAQAAI=</HashCode>
+      <FileName>Models\RailRoadModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.Controller">
     <Position X="9.25" Y="2.25" Width="1.5" />
-    <AssociationLine Name="GameModel" Type="GoldDigger.GameModel">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.11" Y="0.3" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAIIAAAAAAAQAI=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GameModel" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="GoldDigger.GameModel">
     <Position X="9.25" Y="0.5" Width="1.5" />

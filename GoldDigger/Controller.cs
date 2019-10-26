@@ -35,6 +35,7 @@ namespace GoldDigger
             }
         }
 
+<<<<<<< HEAD
         public void Run()
         {
             timer.Enabled = true;           
@@ -61,5 +62,12 @@ namespace GoldDigger
         }
 
         
+=======
+        public void startGame()
+        {
+
+            GameModel game = new GameModel();
+        }
+>>>>>>> bdda1ebba343ee0067b96ee7c6282acd7b195b26
     }
 }
