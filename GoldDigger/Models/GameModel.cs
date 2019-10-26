@@ -23,6 +23,11 @@ namespace GoldDigger
             }
         }
 
+        public void addScore(int score)
+        {
+            _score += score;
+        }
+
         public int GetScore()
         {
             return _score;
@@ -35,7 +40,7 @@ namespace GoldDigger
 
         public void Update()
         {
-
+            
         }
     }
 }

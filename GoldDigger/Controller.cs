@@ -44,8 +44,7 @@ namespace GoldDigger
         private void Stop()
         {
             timer.Enabled = false;
-            GameOverView endScreen = new GameOverView();
-            endScreen.Show(-1);
+            GameOverView endScreen = new GameOverView();            
             endScreen.Show(game.GetScore());
         }
 
