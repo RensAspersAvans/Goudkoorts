@@ -16,6 +16,8 @@ namespace GoldDigger
         public SwitchForward Switch4 { get; set;}
         public SwitchBackward Switch5 { get; set; }
 
+        
+
         public Track[] Layers { get; set; }
 
         public RailRoadModel()
@@ -200,11 +202,12 @@ namespace GoldDigger
 
         public void AddCart()
         {
+            
             Random rnd = new Random();
 
             int spawnchange = rnd.Next(0, 1);
 
-            int i = rnd.Next(1, 3);
+            int i = rnd.Next(1, 4);
 
             Cart c = new Cart();
 
@@ -212,6 +215,7 @@ namespace GoldDigger
             c.cur_track = Warehouses[i - 1];
             carts.Add(c);
             Debug.WriteLine("cart added");
+            
         }
 
         public Boolean MoveCarts()

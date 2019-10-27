@@ -41,12 +41,13 @@ namespace GoldDigger
 
         public void Update()
         {
-            rm.AddCart();
+            
             if (!rm.MoveCarts())
             {
                 _gameOver = true;
                 return;
             }
+            rm.AddCart();
         }
     }
 }
