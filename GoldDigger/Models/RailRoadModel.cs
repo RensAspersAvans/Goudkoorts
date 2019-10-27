@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace GoldDigger
@@ -17,6 +18,11 @@ namespace GoldDigger
 
         public Track[] Layers { get; set; }
 
+        public RailRoadModel()
+        {
+            GenerateRailRoad();
+        }
+
         public void GenerateRailRoad()
         {
             Track lastCreated;
@@ -30,6 +36,7 @@ namespace GoldDigger
             Switch1.Next = lastCreated;
             Switch2 = new SwitchForward();
             Switch2.Previous = lastCreated;
+            lastCreated.Next = Switch2;
 
 
             Warehouses[0] = new StandardTrack();
@@ -189,6 +196,22 @@ namespace GoldDigger
 
             Layers[12] = lastCreated;                   //layer 13 + 12
 
+        }
+
+        internal void AddCart()
+        {
+            Random rnd = new Random();
+
+            int spawnchange = rnd.Next(0, 1);
+
+            int i = rnd.Next(1, 3);
+
+            Cart c = new Cart();
+
+            Warehouses[i - 1].Cart = c;
+            c.cur_track = Warehouses[i];
+            carts.Add(c);
+            Debug.WriteLine("cart added");
         }
 
         public Boolean MoveCarts()

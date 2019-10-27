@@ -25,13 +25,13 @@ namespace GoldDigger
 
         }
 
-        public override char getSymbol()
+        public override String getSymbol()
         {
             if (Cart == null)
             {
-                if (Symbol.Equals(null))
+                if (Symbol == null)
                 {
-                    Symbol = '█';
+                    Symbol = "███";
                 }
                 return Symbol;
             }
@@ -39,9 +39,9 @@ namespace GoldDigger
             {
                 if (Cart.Full == true)
                 {
-                    return 'Ü';
+                    return "ÜÜÜ";
                 }
-                return 'U';
+                return "UUU";
             }
         }
     }

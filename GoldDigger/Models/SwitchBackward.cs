@@ -10,7 +10,7 @@ namespace GoldDigger
 
         public SwitchBackward()
         {
-            Symbol = '/';
+            Symbol = "///";
         }
 
         public override int ReceiveCart(Cart cart)
@@ -35,13 +35,13 @@ namespace GoldDigger
                 Track memory = Previous;
                 Previous = SecondPrevious;
                 SecondPrevious = memory;
-                if (Symbol.Equals('/'))
+                if (Symbol.Equals("///"))
                 {
-                    Symbol = '\\';
+                    Symbol = "\\\\";
                 }
                 else
                 {
-                    Symbol = '/';
+                    Symbol = "///";
                 }
             }
             

@@ -6,19 +6,19 @@ namespace GoldDigger
 {
     public class YardTrack : Track
     {
-        public override Char getSymbol()
+        public override String getSymbol()
         {
             if (Cart == null)
             {
-                if (Symbol.Equals(null))
+                if (Symbol == null)
                 {
-                    Symbol = '_';
+                    Symbol = "___";
                 }
                 return Symbol;
             }
             else
             {
-                return 'Ü';
+                return "ÜÜÜ";
             }
         }
 

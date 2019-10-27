@@ -9,24 +9,24 @@ namespace GoldDigger
         public Track Next { get; set; }
         public Track Previous { get; set; }
         public Cart Cart { get; set; }
-        public Char Symbol{ get; set; }
+        public String Symbol{ get; set; }
 
 
         
 
-        public virtual Char getSymbol()
+        public virtual String getSymbol()
         {
             if (Cart == null)
             {
-                if (Symbol.Equals(null))
+                if (Symbol == null)
                 {
-                    Symbol = '█';
+                    Symbol = "███";
                 }
                 return Symbol;
             }
             else
             {
-                return 'Ü';
+                return "ÜÜÜ";
             }
         }
 

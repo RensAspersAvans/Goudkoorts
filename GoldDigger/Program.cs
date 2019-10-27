@@ -9,6 +9,8 @@ namespace GoldDigger
             
                 Console.WriteLine("     1 - 5:   Verander switch 1 - 5 van richting");
                 Console.WriteLine("     S:       Stop met spelen");
+
+            new Controller().Run();
             
         }
     }

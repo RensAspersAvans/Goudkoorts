@@ -10,7 +10,7 @@ namespace GoldDigger
 
         public SwitchForward()
         {
-            Symbol = '/';
+            Symbol = "///";
         }
 
 
@@ -21,13 +21,13 @@ namespace GoldDigger
                 Track memory = Next;
                 Next = SecondNext;
                 SecondNext = memory;
-                if (Symbol.Equals('/'))
+                if (Symbol.Equals("///"))
                 {
-                    Symbol = '\\';
+                    Symbol = "\\\\";
                 }
                 else
                 {
-                    Symbol = '/';
+                    Symbol = "///";
                 }
             }
 

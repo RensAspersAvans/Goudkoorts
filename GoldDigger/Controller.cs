@@ -9,35 +9,37 @@ namespace GoldDigger
     {
         private static System.Timers.Timer timer;
 
+        private int _tickcounter { get; set; }
+
         public Controller()
         {
             //Maak een timer aan
-            
+            this.gameView = new GameView();
+            this.game = new GameModel();
+
             timer = new System.Timers.Timer(1000); //1000 ms = 1 tick per seconde
 
             timer.Elapsed += new ElapsedEventHandler((source, e) => Tick()); //Roept Tick aan elke seconde
             timer.AutoReset = true;
             
+            
         }
         public GameModel game
         {
-            get => default;
-            set
-            {
-            }
+            get; set;
         }
 
         public GameView gameView
         {
-            get => default;
-            set
-            {
-            }
+            get; set;
         }
 
         public void Run()
         {
-            timer.Enabled = true;           
+            timer.Enabled = true;
+            gameView.Show(ParseRailroad());
+            
+
         }
 
         private void Stop()
@@ -49,15 +51,26 @@ namespace GoldDigger
 
         public void Tick()
         {
-            game.Update();
-            
-            if(game.GameOver())
+
+            if (_tickcounter == 3)
             {
-                Stop();
-            }            
+                game.Update();
+            
+                if(game.GameOver())
+                {
+                    Stop();
+                }
+
+                gameView.Show(ParseRailroad());
+
+                _tickcounter = 0;
+            }
+
+            _tickcounter++;
+
         }
 
-        public void ParseRailroad()
+        public String[] ParseRailroad()
         {
             Track[] trackLayers = game.GetLayers();
             String[] StringLayers = new String[15];
@@ -113,22 +126,41 @@ namespace GoldDigger
                         break;
                 }
 
-                Char[] newLayerCharArray= new Char[k];
+                String[] newLayerLooseStringArray= new String[k];
 
                 Track memory = trackLayers[i];
 
                 for (int q = 0; q < k; q++)
                 {
-                    newLayerCharArray[q] = memory.getSymbol();
-                    memory = memory.Next;
+                    newLayerLooseStringArray[q] = memory.getSymbol();
+                    if (i == 9 || i == 12)
+                    {
+                        memory = memory.Previous;
+                    }
+                    else
+                    {
+                        memory = memory.Next;
+                    }
+                    
                 }
 
-                String newLayerString = newLayerCharArray.ToString();
+                String newLayerString = ConvertArrayToString(newLayerLooseStringArray);
                 StringLayers[i] = newLayerString;
             }
+
+            return StringLayers;
         }
 
-        
+        public String ConvertArrayToString(String[] strarray)
+        {
+            StringBuilder stringbuilder = new StringBuilder();
+
+            for (int i = 0; i < strarray.Length; i++)
+            {
+                stringbuilder.Append(strarray[i]);
+            }
+            return stringbuilder.ToString();
+        }
 
     }
 }

@@ -8,23 +8,18 @@ namespace GoldDigger
     {
         private int _score;
         private bool _gameOver;
-        private RailRoadModel rm;
+        private RailRoadModel rm { get; set; }
 
 
         public GameModel()
         {
             _score = 0;
             _gameOver = false;
+            this.rm = new RailRoadModel();
         }
-        public RailRoadModel RailRoadModel
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        
 
-        public  Track[] GetLayers()
+        public Track[] GetLayers()
         {
             return rm.Layers;
         }
@@ -46,6 +41,7 @@ namespace GoldDigger
 
         public void Update()
         {
+            rm.AddCart();
             if (!rm.MoveCarts())
             {
                 _gameOver = true;
