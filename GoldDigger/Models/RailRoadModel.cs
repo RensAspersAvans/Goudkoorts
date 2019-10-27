@@ -191,11 +191,11 @@ namespace GoldDigger
                 lastCreated = lastCreated.Next;
             }
 
-            lastCreated.Next = new HarborTrack();
-            lastCreated.Next.Previous = lastCreated;
-            lastCreated = lastCreated.Next;
+            shipBoard = new HarborTrack();
+            shipBoard.Previous = lastCreated;
+            lastCreated.Next = shipBoard;
 
-            shipBoard = lastCreated;
+            lastCreated = shipBoard;
 
             for (int i = 0; i < 9; i++)
             {
