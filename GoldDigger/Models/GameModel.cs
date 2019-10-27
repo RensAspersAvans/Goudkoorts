@@ -1,6 +1,7 @@
 ﻿using GoldDigger.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace GoldDigger
@@ -11,6 +12,12 @@ namespace GoldDigger
         private bool _gameOver;
         private Ship ship;
         public RailRoadModel rm { get; set; }
+        public int DifficultyTickLevel;
+        public int Difficulty
+        {
+            get { return rm.difficulty; }
+            set { rm.difficulty = value;  }
+        }
 
 
         public GameModel()
@@ -51,7 +58,19 @@ namespace GoldDigger
                 _gameOver = true;
                 return;
             }
+            
             rm.AddCart();
+
+            DifficultyTickLevel++;
+
+            if (DifficultyTickLevel == 10)
+            {
+                if (Difficulty != 10)
+                {
+                    DifficultyTickLevel = 0;
+                    Debug.WriteLine("Its getting harder");
+                }
+            }
             ship.Update();
         }
 
