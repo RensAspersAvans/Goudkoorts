@@ -48,7 +48,22 @@ namespace GoldDigger
 
             Warehouses[1] = new StandardTrack();
             Layers[1] = Warehouses[1];                  //layer 2 + 4
+            lastCreated = Warehouses[1];
+
+            for (int i = 0; i < 3; i++)
+            {
+                lastCreated.Next = new StandardTrack();
+                lastCreated.Next.Previous = lastCreated;
+                lastCreated = lastCreated.Next;
+            }
+
+            lastCreated.Next = Switch1;
+            Switch1.Previous = lastCreated;
+
+            Warehouses[2] = new StandardTrack();
             lastCreated = Warehouses[2];
+
+            Layers[6] = Warehouses[2];
 
             for (int i = 0; i < 6; i++)
             {
@@ -172,7 +187,7 @@ namespace GoldDigger
                 lastCreated = lastCreated.Next;
             }
 
-            Layers[12] = lastCreated;
+            Layers[12] = lastCreated;                   //layer 13 + 12
 
         }
 

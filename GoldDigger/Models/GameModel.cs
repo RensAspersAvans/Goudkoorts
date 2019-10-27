@@ -24,6 +24,11 @@ namespace GoldDigger
             }
         }
 
+        public  Track[] GetLayers()
+        {
+            return rm.Layers;
+        }
+
         public void addScore(int score)
         {
             _score += score;

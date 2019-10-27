@@ -59,7 +59,73 @@ namespace GoldDigger
 
         public void ParseRailroad()
         {
-            //deze methode zet alle informatie uit de RailRoad om naar strings en stuurt deze door naar de view om te laten zien.
+            Track[] trackLayers = game.GetLayers();
+            String[] StringLayers = new String[15];
+            int k = 0;
+
+            for (int i = 0; i < trackLayers.Length; i++)
+            {
+                switch (i) {
+                    case 0:
+                        k = 4;
+                        break;
+                    case 1:
+                        k = 4;
+                        break;
+                    case 2:
+                        k = 3;
+                        break;
+                    case 3:
+                        k = 5;
+                        break;
+                    case 4:
+                        k = 2;
+                        break;
+                    case 5:
+                        k = 3;
+                        break;
+                    case 6:
+                        k = 7;
+                        break;
+                    case 7:
+                        k = 3;
+                        break;
+                    case 8:
+                        k = 4;
+                        break;
+                    case 9:
+                        k = 11;
+                        break;
+                    case 10:
+                        k = 1;
+                        break;
+                    case 11:
+                        k = 1;
+                        break;
+                    case 12:
+                        k = 12;
+                        break;
+                    case 13:
+                        k = 1;
+                        break;
+                    case 14:
+                        k = 2;
+                        break;
+                }
+
+                Char[] newLayerCharArray= new Char[k];
+
+                Track memory = trackLayers[i];
+
+                for (int q = 0; q < k; q++)
+                {
+                    newLayerCharArray[q] = memory.getSymbol();
+                    memory = memory.Next;
+                }
+
+                String newLayerString = newLayerCharArray.ToString();
+                StringLayers[i] = newLayerString;
+            }
         }
 
         
