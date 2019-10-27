@@ -37,7 +37,7 @@ namespace GoldDigger
                 SecondPrevious = memory;
                 if (Symbol.Equals("///"))
                 {
-                    Symbol = "\\\\";
+                    Symbol = "\\\\\\";
                 }
                 else
                 {
