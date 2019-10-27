@@ -14,6 +14,9 @@ namespace GoldDigger
         public void Update(String[] layers)
         {
             Console.Clear();
+            Console.WriteLine("         ");
+            Console.Write("");
+
 
             Console.WriteLine(layers[12]);
             Console.WriteLine("                                 " + layers[11]);
