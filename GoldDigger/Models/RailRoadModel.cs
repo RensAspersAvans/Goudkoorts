@@ -198,7 +198,7 @@ namespace GoldDigger
 
         }
 
-        internal void AddCart()
+        public void AddCart()
         {
             Random rnd = new Random();
 
@@ -209,16 +209,18 @@ namespace GoldDigger
             Cart c = new Cart();
 
             Warehouses[i - 1].Cart = c;
-            c.cur_track = Warehouses[i];
+            c.cur_track = Warehouses[i - 1];
             carts.Add(c);
             Debug.WriteLine("cart added");
         }
 
         public Boolean MoveCarts()
         {
-            foreach(var cart in carts)
+            for(int i = 0; i < carts.Count;  i++)
             {
-                if (!cart.MoveForward())
+                Cart c = carts[i];
+
+                if (!c.MoveForward())
                 {
                     return false;
                 }
