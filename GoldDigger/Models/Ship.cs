@@ -45,7 +45,7 @@ namespace GoldDigger.Models
             return _isReady;
         }
 
-        public String parseShip()
+       public String ParseShip()
         {
             String _shipString = "|";
             for(int i = 0; i < 8; i++)

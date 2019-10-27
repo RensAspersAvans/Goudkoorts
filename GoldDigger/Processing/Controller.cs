@@ -96,7 +96,7 @@ namespace GoldDigger
                 TickCount = 0;
             }
 
-            gameView.Update(game.getShip(), ParseRailroad());
+            gameView.Update(game.GetShip().ParseShip(), ParseRailroad()); ;
             
         }
 

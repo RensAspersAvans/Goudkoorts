@@ -11,11 +11,12 @@ namespace GoldDigger
 
         
 
-        public void Update(String[] layers)
+        public void Update(String shipString, String[] layers)
         {
             Console.Clear();
-            Console.WriteLine("         ");
-            Console.Write("");
+            //Ruimte voor schip maken
+            Console.Write("                       "); 
+            Console.WriteLine(shipString);
 
 
             Console.WriteLine(layers[12]);
@@ -43,6 +44,8 @@ namespace GoldDigger
         public void Show(String[] layers)
         {
             Console.Clear();
+            
+            Console.WriteLine(); //Ruimte voor schip maken
 
             Console.WriteLine(layers[12]);
             Console.WriteLine("                                 " + layers[11]);
@@ -54,6 +57,11 @@ namespace GoldDigger
             Console.WriteLine("                                 " + layers[13]);
             Console.WriteLine("   " + layers[9]);
             Debug.WriteLine("screen updated");
+        }
+
+        internal void Update(object p, string[] v)
+        {
+            throw new NotImplementedException();
         }
     }
 

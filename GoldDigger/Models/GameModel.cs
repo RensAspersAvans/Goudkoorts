@@ -53,5 +53,10 @@ namespace GoldDigger
             }
             rm.AddCart();
         }
+
+        public Ship GetShip()
+        {
+            return ship;
+        }
     }
 }
