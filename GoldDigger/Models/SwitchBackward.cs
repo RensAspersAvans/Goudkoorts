@@ -15,7 +15,7 @@ namespace GoldDigger
 
         public override int ReceiveCart(Cart cart)
         {
-            if (cart == null)
+            if (Cart == null)
             {
                 if (cart.cur_track == Previous)
                 {
