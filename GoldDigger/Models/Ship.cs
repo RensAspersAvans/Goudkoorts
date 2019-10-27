@@ -8,7 +8,8 @@ namespace GoldDigger.Models
     {
         private int _load;
         private bool _isReady; //true = staat klaar om een lading te ontvangen, false = is nog niet verschenen
-        private String _shipString = "|";
+        
+        private GameModel game { get; set; }
 
         Random _rnd = new Random();
 
@@ -26,7 +27,7 @@ namespace GoldDigger.Models
             {
                 if(_load == 8)
                 {
-                    //game.addScore(10)
+                    game.addScore(10);
                     _load = 0;
                     _isReady = false;
                 }
@@ -36,6 +37,7 @@ namespace GoldDigger.Models
         public void addLoad()
         {
             _load++;
+            game.addScore(1);
         }
 
         public bool IsReady()
@@ -45,7 +47,7 @@ namespace GoldDigger.Models
 
         public String parseShip()
         {
-            _shipString = "|";
+            String _shipString = "|";
             for(int i = 0; i < 8; i++)
             {
                 if(_load > i)
