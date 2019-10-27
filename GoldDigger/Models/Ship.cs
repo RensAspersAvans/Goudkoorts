@@ -17,8 +17,8 @@ namespace GoldDigger.Models
         {
             if(!_isReady)
             {                
-                int chance = _rnd.Next(1, 10);  // pakt een willekeurig nummer tussen 1 en 9
-                if(chance >= 6)
+                int chance = _rnd.Next(1, 23);  // pakt een willekeurig nummer tussen 1 en 22
+                if(chance >= 20)
                 {
                     _isReady = true;                    
                 }
