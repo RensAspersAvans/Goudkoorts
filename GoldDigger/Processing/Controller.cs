@@ -88,6 +88,11 @@ namespace GoldDigger
             if(TickCount == 2)
             {
                 game.Update();
+                if (game.GameOver())
+                {
+                    Stop();
+                    return;
+                }
                 TickCount = 0;
 
             }
