@@ -9,7 +9,7 @@ namespace GoldDigger.Models
         private int _load;
         private bool _isReady = false; //true = staat klaar om een lading te ontvangen, false = is nog niet verschenen
         
-        private GameModel game { get; set; }
+        public GameModel game { get; set; }
 
         Random _rnd = new Random();
 

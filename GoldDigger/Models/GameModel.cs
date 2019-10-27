@@ -25,6 +25,7 @@ namespace GoldDigger
             _score = 0;
             _gameOver = false;
             this.ship = new Ship();
+            ship.game = this;
             this.rm = new RailRoadModel();
             this.rm.shipBoard.ship = ship;
         }

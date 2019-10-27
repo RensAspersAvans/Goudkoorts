@@ -18,8 +18,8 @@ namespace GoldDigger
             //Maak een timer aan
             this.gameView = new GameView();
             this.game = new GameModel();
-            
-            timer = new System.Timers.Timer(500); //1000 ms = 1 tick per seconde
+            WaitTicksCount = 6;
+            timer = new System.Timers.Timer(250); //1000 ms = 1 tick per seconde
 
             timer.Elapsed += new ElapsedEventHandler((source, e) => Tick()); //Roept Tick aan elke seconde
             timer.AutoReset = true; //de timer wordt constant aangeroepen ipv eenmalig
@@ -35,6 +35,10 @@ namespace GoldDigger
         {
             get; set;
         }
+        public int WaitTicksCount { get; private set; }
+        public bool FirstRaise { get; private set; }
+        public bool SecondRaise { get; private set; }
+        public bool ThirdRaise { get; private set; }
 
         public void Run()
         {
@@ -43,6 +47,9 @@ namespace GoldDigger
             _quitGame = false;
             gameView.Show(ParseRailroad());
             InputView input = new InputView();
+            FirstRaise = false;
+            SecondRaise = false;
+            ThirdRaise = false;
             while (!game.GameOver() && !_quitGame)
             {
                 CheckInput(input);
@@ -86,7 +93,7 @@ namespace GoldDigger
         {
 
             TickCount++;
-            if(TickCount == 2)
+            if(TickCount == WaitTicksCount)
             {
                 game.Update();
                 if (game.GameOver())
@@ -95,6 +102,21 @@ namespace GoldDigger
                     return;
                 }
                 TickCount = 0;
+                if(game.GetScore() > 18 && !FirstRaise)
+                {
+                    FirstRaise = true;
+                    WaitTicksCount = WaitTicksCount--;
+                }
+                if (game.GetScore() > 25 && !SecondRaise)
+                {
+                    SecondRaise = true;
+                    WaitTicksCount = WaitTicksCount--;
+                }
+                if (game.GetScore() > 36 && !ThirdRaise)
+                {
+                    FirstRaise = true;
+                    WaitTicksCount = WaitTicksCount--;
+                }
             }
 
             gameView.Update(game.GetShip().ParseShip(), ParseRailroad(), game.GetScore());
