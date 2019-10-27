@@ -63,7 +63,7 @@ namespace GoldDigger
             Warehouses[2] = new StandardTrack();
             lastCreated = Warehouses[2];
 
-            Layers[6] = Warehouses[2];
+            Layers[6] = Warehouses[2];             //layer 7 + 7
 
             for (int i = 0; i < 6; i++)
             {
