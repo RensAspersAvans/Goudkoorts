@@ -66,7 +66,7 @@ namespace GoldDigger.Models
                     }
                 }
                 _shipString += "|";
-                return _shipString + _load;
+                return _shipString + "(" + _load + ")";
                 //voorbeeld: |******  |
             }
 
