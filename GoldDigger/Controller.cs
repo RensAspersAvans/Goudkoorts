@@ -37,8 +37,12 @@ namespace GoldDigger
         public void Run()
         {
             timer.Enabled = true;
-            gameView.Show(ParseRailroad());
-            
+            gameView.Show(ParseRailroad());  
+            while (!game.GameOver())
+            {
+
+            }
+            Stop();         
 
         }
 
@@ -51,22 +55,9 @@ namespace GoldDigger
 
         public void Tick()
         {
+            game.Update();
 
-            if (_tickcounter == 3)
-            {
-                game.Update();
             
-                if(game.GameOver())
-                {
-                    Stop();
-                }
-
-                gameView.Show(ParseRailroad());
-
-                _tickcounter = 0;
-            }
-
-            _tickcounter++;
 
         }
 
