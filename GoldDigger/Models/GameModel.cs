@@ -52,6 +52,7 @@ namespace GoldDigger
                 return;
             }
             rm.AddCart();
+            ship.Update();
         }
 
         public Ship GetShip()

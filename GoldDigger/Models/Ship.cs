@@ -7,7 +7,7 @@ namespace GoldDigger.Models
     public class Ship
     {
         private int _load;
-        private bool _isReady; //true = staat klaar om een lading te ontvangen, false = is nog niet verschenen
+        private bool _isReady = false; //true = staat klaar om een lading te ontvangen, false = is nog niet verschenen
         
         private GameModel game { get; set; }
 
@@ -18,7 +18,7 @@ namespace GoldDigger.Models
             if(!_isReady)
             {                
                 int chance = _rnd.Next(1, 10);  // pakt een willekeurig nummer tussen 1 en 9
-                if(chance >= 2)
+                if(chance >= 6)
                 {
                     _isReady = true;                    
                 }
