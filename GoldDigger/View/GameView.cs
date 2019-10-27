@@ -24,7 +24,11 @@ namespace GoldDigger
             Console.WriteLine(layers[6] + "   " + layers[8]);
             Console.WriteLine("                                 " + layers[13]);
             Console.WriteLine("   " + layers[9]);
-            Debug.WriteLine("screen updated");
+
+            Console.WriteLine();
+
+            Console.WriteLine("     1 - 5:   Verander switch 1 - 5 van richting.");
+            Console.WriteLine("     S:       Stop met spelen.");
         }
 
         public void ShowScoreBoard(int score)
