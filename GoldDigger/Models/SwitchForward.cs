@@ -23,7 +23,7 @@ namespace GoldDigger
                 SecondNext = memory;
                 if (Symbol.Equals("///"))
                 {
-                    Symbol = "\\\\";
+                    Symbol = "\\\\\\";
                 }
                 else
                 {
