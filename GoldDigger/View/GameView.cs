@@ -17,6 +17,12 @@ namespace GoldDigger
             
         }
 
+        public void ShowScoreBoard(int score)
+        {
+            Console.WriteLine("SCORE:  " + score);
+            //tijd?
+        }
+
         public void Show(String[] layers)
         {
             Console.Clear();
