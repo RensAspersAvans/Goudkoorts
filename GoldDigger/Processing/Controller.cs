@@ -82,6 +82,7 @@ namespace GoldDigger
 
         public void Tick()
         {
+
             game.Update();
             gameView.Update(ParseRailroad());
         }
