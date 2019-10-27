@@ -11,9 +11,6 @@ namespace GoldDigger
         public Cart Cart { get; set; }
         public String Symbol{ get; set; }
 
-
-        
-
         public virtual String getSymbol()
         {
             if (Cart == null)

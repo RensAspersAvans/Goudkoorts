@@ -79,5 +79,13 @@ namespace GoldDigger
         {
             return ship;
         }
+
+        public RailRoadModel RailRoadModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

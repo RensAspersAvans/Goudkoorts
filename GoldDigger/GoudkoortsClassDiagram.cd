@@ -1,72 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="GoldDigger.Cart">
-    <Position X="1.75" Y="0.5" Width="1.5" />
+    <Position X="7" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAgAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Models\Cart.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.GameView">
-    <Position X="11.5" Y="1" Width="1.5" />
+    <Position X="15" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameView.cs</FileName>
+      <HashCode>AAQAgAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\GameView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.Track">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IgAAgEAAAAAAAgAABAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Models\Track.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.StandardTrack">
-    <Position X="1.75" Y="2.5" Width="1.5" />
+    <Position X="1.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\StandardTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.SwitchForward">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\SwitchForward.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.SwitchBackward">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="1.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\SwitchBackward.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.YardTrack">
-    <Position X="4" Y="3.75" Width="1.5" />
+    <Position X="4" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\YardTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.HarborTrack">
-    <Position X="1.75" Y="3.75" Width="1.5" />
+    <Position X="1.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Models\HarborTrack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.RailRoadModel">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAIAAAAAAQAAI=</HashCode>
+      <HashCode>ACAAAEABAUAAAAgIAAAAAAAAAAAAAAAEYBkAAAARAAI=</HashCode>
       <FileName>Models\RailRoadModel.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Track" />
+      <Property Name="Cart" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="GoldDigger.GameModel">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAgAAAAACAAiAAAAAAAAAAAAEAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AARAgAACAACCAyAAAAAAAAAAAAEAAACAgAAAgAAAAAA=</HashCode>
       <FileName>Models\GameModel.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -74,18 +78,23 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="GoldDigger.InputView">
-    <Position X="11.5" Y="2.25" Width="1.5" />
+    <Position X="15" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
-      <FileName>InputView.cs</FileName>
+      <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GoldDigger.Controller">
-    <Position X="7.5" Y="3.25" Width="1.5" />
+    <Position X="12.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQQAAAAAAAgAAAAAAAAAAAAAAAAAAAIIAAAAAAAQAI=</HashCode>
-      <FileName>Controller.cs</FileName>
+      <HashCode>AARQACAACAAiEAAAAAAAAAAAAAAAAQAIogAEAAAgwAI=</HashCode>
+      <FileName>Processing\Controller.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameModel" />
+      <Property Name="GameView" />
+      <Property Name="InputView" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -40,6 +40,30 @@ namespace GoldDigger
         public bool SecondRaise { get; private set; }
         public bool ThirdRaise { get; private set; }
 
+        public GameModel GameModel
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public GameView GameView
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public InputView InputView
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void Run()
         {
             timer.Enabled = true;

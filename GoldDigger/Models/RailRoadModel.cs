@@ -249,5 +249,21 @@ namespace GoldDigger
 
             return true;
         }
+
+        public Track Track
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Cart Cart
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }
