@@ -9,6 +9,7 @@ namespace GoldDigger
     {
         private static System.Timers.Timer timer;
         int TickCount;
+        
 
         private Boolean _quitGame;
 
@@ -18,7 +19,7 @@ namespace GoldDigger
             this.gameView = new GameView();
             this.game = new GameModel();
             
-            timer = new System.Timers.Timer(1000); //1000 ms = 1 tick per seconde
+            timer = new System.Timers.Timer(500); //1000 ms = 1 tick per seconde
 
             timer.Elapsed += new ElapsedEventHandler((source, e) => Tick()); //Roept Tick aan elke seconde
             timer.AutoReset = true; //de timer wordt constant aangeroepen ipv eenmalig
