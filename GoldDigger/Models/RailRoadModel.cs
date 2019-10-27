@@ -15,7 +15,7 @@ namespace GoldDigger
         public SwitchBackward Switch3 { get; set; }
         public SwitchForward Switch4 { get; set;}
         public SwitchBackward Switch5 { get; set; }
-        public int diffuculty { get; set; }
+        public int difficulty { get; set; }
         public HarborTrack shipBoard { get; set; }
 
         public int waitCart;
@@ -25,7 +25,7 @@ namespace GoldDigger
         public RailRoadModel()
         {
             GenerateRailRoad();
-            diffuculty = 5;
+            difficulty = 5;
         }
 
         public void GenerateRailRoad()
@@ -219,7 +219,7 @@ namespace GoldDigger
             Random rnd = new Random();
 
             int spawnchange = rnd.Next(1, 10);
-            if (spawnchange < diffuculty)
+            if (spawnchange < difficulty)
             {
                 int i = rnd.Next(1, 4);
 
