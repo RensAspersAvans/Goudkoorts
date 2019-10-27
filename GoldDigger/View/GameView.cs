@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace GoldDigger
@@ -30,6 +31,7 @@ namespace GoldDigger
             Console.WriteLine(layers[6] + "   " + layers[8] );
             Console.WriteLine("                                 " + layers[13]);
             Console.WriteLine("   " + layers[9]);
+            Debug.WriteLine("screen updated");
         }
     }
 
