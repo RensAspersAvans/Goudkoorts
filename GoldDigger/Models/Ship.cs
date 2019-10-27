@@ -8,6 +8,8 @@ namespace GoldDigger.Models
     {
         private int _load;
         private bool _isReady; //true = staat klaar om een lading te ontvangen, false = is nog niet verschenen
+        private String _shipString = "|";
+
         Random _rnd = new Random();
 
         public void Update()
@@ -39,6 +41,25 @@ namespace GoldDigger.Models
         public bool IsReady()
         {
             return _isReady;
+        }
+
+        public String parseShip()
+        {
+            _shipString = "|";
+            for(int i = 0; i < 8; i++)
+            {
+                if(_load < i)
+                {
+                    _shipString += "*";
+                }
+                else
+                {
+                    _shipString += " ";
+                }
+            }
+            _shipString += "|";
+            return _shipString;
+            //voorbeeld: |******  |
         }
 
     }
