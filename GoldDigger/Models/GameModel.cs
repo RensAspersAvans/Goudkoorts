@@ -15,8 +15,8 @@ namespace GoldDigger
         public int DifficultyTickLevel;
         public int Difficulty
         {
-            get { return rm.diffuculty; }
-            set { rm.diffuculty = value;  }
+            get { return rm.difficulty; }
+            set { rm.difficulty = value;  }
         }
 
 
@@ -71,6 +71,7 @@ namespace GoldDigger
                     Debug.WriteLine("Its getting harder");
                 }
             }
+            ship.Update();
         }
 
         public Ship GetShip()
