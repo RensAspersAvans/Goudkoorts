@@ -21,7 +21,7 @@ namespace GoldDigger
             timer = new System.Timers.Timer(1000); //1000 ms = 1 tick per seconde
 
             timer.Elapsed += new ElapsedEventHandler((source, e) => Tick()); //Roept Tick aan elke seconde
-            timer.AutoReset = true;
+            timer.AutoReset = true; //de timer wordt constant aangeroepen ipv eenmalig
             
             
         }
@@ -83,16 +83,8 @@ namespace GoldDigger
 
         public void Tick()
         {
-            if(_tickCount%2 == 0)
-            {
-                game.Update();
-                _tickCount++;
-            }
-            else
-            {
-                _tickCount = 0;
-            }
-
+            
+            game.Update();
             gameView.Update(ParseRailroad());
             
         }
