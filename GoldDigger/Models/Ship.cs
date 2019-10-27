@@ -48,7 +48,7 @@ namespace GoldDigger.Models
             _shipString = "|";
             for(int i = 0; i < 8; i++)
             {
-                if(_load < i)
+                if(_load > i)
                 {
                     _shipString += "*";
                 }
