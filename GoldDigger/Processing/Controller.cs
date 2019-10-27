@@ -83,15 +83,14 @@ namespace GoldDigger
 
         public void Tick()
         {
-            if(_tickCount%2 == 0)
+            _tickCount++;
+            if(_tickCount == 2)
             {
                 game.Update();
-                _tickCount++;
-            }
-            else
-            {
                 _tickCount = 0;
+
             }
+            
 
             gameView.Update(ParseRailroad());
             
