@@ -7,15 +7,14 @@ namespace GoldDigger
 {
     public class GameView
     {
-        
+                
 
-        
-
-        public void Update(String shipString, String[] layers)
+        public void Update(String shipString, String[] layers, int score)
         {
             Console.Clear();
+            Console.Write("SCORE:    " + score);
             //Ruimte voor schip maken
-            Console.Write("                       "); 
+            Console.Write("             "); 
             Console.WriteLine(shipString);
 
 
@@ -44,8 +43,9 @@ namespace GoldDigger
         public void Show(String[] layers)
         {
             Console.Clear();
-            
+            Console.Write("SCORE:    0");
             Console.WriteLine(); //Ruimte voor schip maken
+           
 
             Console.WriteLine(layers[12]);
             Console.WriteLine("                                 " + layers[11]);
@@ -59,10 +59,7 @@ namespace GoldDigger
             Debug.WriteLine("screen updated");
         }
 
-        internal void Update(object p, string[] v)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 
 
