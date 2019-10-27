@@ -8,7 +8,7 @@ namespace GoldDigger
     public class Controller
     {
         private static System.Timers.Timer timer;
-        int _tickCount;
+        int TickCount;
 
         private Boolean _quitGame;
 
@@ -38,7 +38,7 @@ namespace GoldDigger
         public void Run()
         {
             timer.Enabled = true;
-            _tickCount = 0;
+            TickCount = 0;
             _quitGame = false;
             gameView.Show(ParseRailroad());
             InputView input = new InputView();
@@ -83,11 +83,11 @@ namespace GoldDigger
 
         public void Tick()
         {
-            _tickCount++;
-            if(_tickCount == 2)
+            TickCount++;
+            if(TickCount == 2)
             {
                 game.Update();
-                _tickCount = 0;
+                TickCount = 0;
 
             }
             
