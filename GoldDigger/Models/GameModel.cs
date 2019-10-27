@@ -8,7 +8,7 @@ namespace GoldDigger
     {
         private int _score;
         private bool _gameOver;
-        private RailRoadModel rm { get; set; }
+        public RailRoadModel rm { get; set; }
 
 
         public GameModel()

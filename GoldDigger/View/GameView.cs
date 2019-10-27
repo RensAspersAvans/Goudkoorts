@@ -27,6 +27,12 @@ namespace GoldDigger
             Debug.WriteLine("screen updated");
         }
 
+        public void ShowScoreBoard(int score)
+        {
+            Console.WriteLine("SCORE:  " + score);
+            //tijd?
+        }
+
         public void Show(String[] layers)
         {
             Console.Clear();

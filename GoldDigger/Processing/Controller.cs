@@ -53,19 +53,22 @@ namespace GoldDigger
             switch(input.AskInput())
             {
                 case 's':
-                    _quitGame = true;
+                    _quitGame = true;                    
                     break;
                 case '1':
-                    //beweeg switch 1
+                    game.rm.Switch1.Switch();
                     break;
                 case '2':
-                    //beweeg switch 2
+                    game.rm.Switch2.Switch();
                     break;
                 case '3':
+                    game.rm.Switch3.Switch();
                     break;
                 case '4':
+                    game.rm.Switch4.Switch();
                     break;
                 case '5':
+                    game.rm.Switch5.Switch();
                     break;
             }           
         }
