@@ -9,14 +9,15 @@ namespace GoldDigger
     {
         private static System.Timers.Timer timer;
 
-        private int _tickcounter { get; set; }
+
+        private Boolean _quitGame;
 
         public Controller()
         {
             //Maak een timer aan
             this.gameView = new GameView();
             this.game = new GameModel();
-
+            
             timer = new System.Timers.Timer(1000); //1000 ms = 1 tick per seconde
 
             timer.Elapsed += new ElapsedEventHandler((source, e) => Tick()); //Roept Tick aan elke seconde
@@ -37,13 +38,36 @@ namespace GoldDigger
         public void Run()
         {
             timer.Enabled = true;
-            gameView.Show(ParseRailroad());  
-            while (!game.GameOver())
+            _quitGame = false;
+            gameView.Show(ParseRailroad());
+            InputView input = new InputView();
+            while (!game.GameOver() && !_quitGame)
             {
-
+                CheckInput(input);
             }
-            Stop();         
+            Stop();
+        }
 
+        private void CheckInput(InputView input)
+        {
+            switch(input.AskInput())
+            {
+                case 's':
+                    _quitGame = true;
+                    break;
+                case '1':
+                    //beweeg switch 1
+                    break;
+                case '2':
+                    //beweeg switch 2
+                    break;
+                case '3':
+                    break;
+                case '4':
+                    break;
+                case '5':
+                    break;
+            }           
         }
 
         private void Stop()
@@ -56,9 +80,6 @@ namespace GoldDigger
         public void Tick()
         {
             game.Update();
-
-            
-
         }
 
         public String[] ParseRailroad()
