@@ -16,6 +16,8 @@ namespace GoldDigger
         public SwitchForward Switch4 { get; set;}
         public SwitchBackward Switch5 { get; set; }
 
+        public HarborTrack shipBoard { get; set; }
+
         public int waitCart;
 
         public Track[] Layers { get; set; }
@@ -189,7 +191,13 @@ namespace GoldDigger
                 lastCreated = lastCreated.Next;
             }
 
-            for (int i = 0; i < 10; i++)
+            lastCreated.Next = new HarborTrack();
+            lastCreated.Next.Previous = lastCreated;
+            lastCreated = lastCreated.Next;
+
+            shipBoard = lastCreated;
+
+            for (int i = 0; i < 9; i++)
             {
                 lastCreated.Next = new HarborTrack();
                 lastCreated.Next.Previous = lastCreated;

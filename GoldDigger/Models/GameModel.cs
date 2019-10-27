@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoldDigger.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace GoldDigger
     {
         private int _score;
         private bool _gameOver;
+        private Ship ship;
         public RailRoadModel rm { get; set; }
 
 
@@ -15,7 +17,9 @@ namespace GoldDigger
         {
             _score = 0;
             _gameOver = false;
+            this.ship = new Ship();
             this.rm = new RailRoadModel();
+            this.rm.shipBoard.ship = ship;
         }
         
 
