@@ -36,6 +36,7 @@ namespace GoldDigger
                 if(ship != null && ship.IsReady())
                 {
                     ship.addLoad();
+                    Cart.Full = false;
                 }
                 return 1;
             }

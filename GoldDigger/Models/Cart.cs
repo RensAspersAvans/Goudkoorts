@@ -9,6 +9,11 @@ namespace GoldDigger
         public Track cur_track { get; set; } 
         public Boolean Full { get; set; }
 
+        public Cart()
+        {
+            Full = true;
+        }
+
         public Boolean MoveForward()
         {
             if (cur_track == null)
